@@ -2,7 +2,6 @@ var gulp = require("gulp");
 var sass = require("gulp-sass");
 var browserSync = require("browser-sync").create();
 var autoprefixer = require("gulp-autoprefixer");
-var postcss = require("gulp-postcss");
 var cleanCSS = require("gulp-clean-css");
 //var babel = require("gulp-babel");
 
@@ -22,7 +21,8 @@ function style() {
         .src(paths.styles.src)
         .pipe(sass())
         .on("error", sass.logError)
-        .pipe(postcss([autoprefixer(), cleanCSS()]))
+        .pipe(autoprefixer())
+        .pipe(cleanCSS())
         .pipe(gulp.dest(paths.styles.dest))
         .pipe(browserSync.stream())
     );
