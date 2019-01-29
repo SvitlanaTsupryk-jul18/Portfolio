@@ -1,0 +1,31 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SvitlanaTsupryk-jul18/Portfolio.git"
+  },
+  "author": "Svet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SvitlanaTsupryk-jul18/Portfolio/issues"
+  },
+  "homepage": "https://github.com/SvitlanaTsupryk-jul18/Portfolio#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2"
+  },
+  "dependencies": {}
+}
