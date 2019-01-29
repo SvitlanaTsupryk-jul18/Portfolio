@@ -1,0 +1,154 @@
+//variables
+$main-color: aqua;
+$text-color: rgb(255, 255, 102);
+
+body {
+    background-color: $main-color;
+    color: white;
+    padding-top: 70px;
+}
+
+nav {
+    background-color: rgba(52, 58, 64, 0.8);
+    color: --white;
+    font-size: 1.5em;
+}
+
+.nav-item {
+    padding: 0 20px;
+}
+
+.navbar-dark .navbar-nav .nav-link,
+#send {
+    color: white;
+    transition: all 1s;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: $main-color;
+    transform: scale(1.1);
+    transform-origin: left;
+}
+
+#send .fa-envelope-open {
+    display: none;
+}
+
+#send:hover .fa-envelope {
+    display: none;
+}
+
+#send:hover .fa-envelope-open {
+    display: inline-block;
+    color: $main-color;
+}
+
+.lign-middle {
+    top: 50%;
+    right: 50%;
+    transform: translateY(-50%) translateX(50%);
+    font-size: 5em;
+    font-style: italic;
+}
+
+.carousel-item {
+    height: 90vh;
+}
+
+.main {
+    background: linear-gradient(green, transparent), linear-gradient(to top left, lime, transparent), linear-gradient(to top right, blue, transparent);
+    background-blend-mode: screen;
+    text-align: сenter;
+}
+
+.skills {
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 2em;
+    text-align: center;
+}
+
+.skills span {
+    font-weight: bold;
+    padding: 10px;
+}
+
+.fab,
+.fa-code {
+    color: $text-color;
+}
+
+.resume {
+    background-image: url(images/bg2.jpg);
+}
+
+h5 {
+    color: white;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 200%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.fadeInUp {
+    animation: fadeInUp 1.5s;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -200%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.fadeInDown {
+    animation: fadeInDown 1.5s;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translate3d(200%, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.fadeInRight {
+    animation: fadeInRight 1.5s;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translate3d(-200%, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.fadeInLeft {
+    animation: fadeInLeft 1.5s;
+}
