@@ -204,9 +204,48 @@ nav {
 
 }
 
-// .resume {
-//     background-image: url(images/bg2.jpg);
-// }
+.resume {
+    display: flex;
+
+
+    &__text {
+        font-size: 1.5rem;
+        color: $grey-color;
+    }
+
+    &__smile {
+        height: 5rem;
+        float: left;
+    }
+}
+
+.contact {
+    background-image: url(../images/bg2.jpg);
+    height: 90vh;
+    color: white;
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+
+    &:hover &__inner {
+        background-color: rgba(0, 255, 255, 0.5);
+    }
+
+    &__inner {
+        background-color: transparent;
+        padding: 100px 0;
+        transition: all .2s ease-out;
+    }
+
+    &__text {
+        font-size: 30px;
+        padding-bottom: 1.5em;
+    }
+
+}
 
 h5 {
     color: white;
