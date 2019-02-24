@@ -119,6 +119,18 @@ nav {
         background-image: url(../images/macbook.png);
     }
 
+    &--fourth {
+        background-image: url(../images/bulls.jpg);
+    }
+
+    &--fifth {
+        background-image: url(../images/mmm.png);
+    }
+
+    &--sixth {
+        background-image: url(../images/table.jpg);
+    }
+
     &__title {
         font-size: 2em;
         transform: translateY(-500%);
@@ -173,6 +185,7 @@ nav {
 
         &:hover .example {
             transform: scale(1.1);
+            transform-origin: center;
         }
 
         &:hover .example::before {
