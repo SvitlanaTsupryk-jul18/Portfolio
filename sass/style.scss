@@ -1,5 +1,5 @@
 //variables
-$main-color: aqua;
+$main-color: rgb(0, 208, 160);
 $text-color: rgb(255, 255, 102);
 $grey-color:rgba(52, 58, 64, 0.8);
 
@@ -12,6 +12,7 @@ $grey-color:rgba(52, 58, 64, 0.8);
 }
 
 body {
+    height: 100px;
     background-color: $main-color;
     color: white;
     padding-top: 70px;
@@ -19,7 +20,7 @@ body {
 
 nav {
     background-color: $grey-color;
-    color: --white;
+    color: white;
     font-size: 1.5em;
 }
 
@@ -175,7 +176,7 @@ nav {
         position: absolute;
         top: 0;
         left: 0;
-        background-color: rgba(0, 255, 255, 0.5);
+        background-color: rgba(0, 208, 160, 0.5);
         z-index: -1;
     }
 
@@ -231,7 +232,7 @@ nav {
     width: 100%;
 
     &:hover &__inner {
-        background-color: rgba(0, 255, 255, 0.5);
+        background-color: rgba(0, 208, 160, 0.5);
     }
 
     &__inner {
