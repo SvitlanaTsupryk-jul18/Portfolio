@@ -3,6 +3,12 @@ $main-color: rgb(0, 208, 160);
 $text-color: rgb(255, 255, 102);
 $grey-color:rgba(52, 58, 64, 0.8);
 
+%backgroundImg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -64,6 +70,17 @@ nav {
 
 .carousel-item {
     height: 90vh;
+
+
+    &-1 {
+        background-image: url(../images/slide11.jpg);
+        @extend %backgroundImg;
+    }
+
+    &-3 {
+        background-image: url(../images/slide3.jpg);
+        @extend %backgroundImg;
+    }
 }
 
 .main {
@@ -230,28 +247,38 @@ nav {
 
 .contact {
     background-image: url(../images/bg2.jpg);
-    height: 90vh;
+    height: 100vh;
     color: white;
     text-align: center;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    @extend %backgroundImg;
     background-attachment: fixed;
     width: 100%;
 
     &:hover &__inner {
-        background-color: rgba(0, 208, 160, 0.5);
+        background-color: rgba(0, 208, 160, 0.7);
     }
 
     &__inner {
         background-color: transparent;
         padding: 100px 0;
         transition: all .2s ease-out;
+        height: 100%;
     }
 
     &__text {
         font-size: 30px;
         padding-bottom: 1.5em;
+    }
+
+    &__icon {
+        font-size: 2rem;
+        color: white;
+        transition: all .3s;
+
+        &:hover {
+            color: $text-color;
+            transform: scale(1.2);
+        }
     }
 
 }
