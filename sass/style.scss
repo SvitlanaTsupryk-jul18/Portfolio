@@ -247,7 +247,7 @@ nav {
 
 .contact {
     background-image: url(../images/bg2.jpg);
-    height: 100vh;
+
     color: white;
     text-align: center;
     @extend %backgroundImg;
@@ -285,6 +285,12 @@ nav {
 
 h5 {
     color: white;
+}
+
+footer {
+    padding: 2rem;
+    font-size: 1.5rem;
+    color: $text-color;
 }
 
 @keyframes fadeInUp {
