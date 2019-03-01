@@ -36,6 +36,19 @@ h1 {
     padding-top: 10%;
 }
 
+.h2 {
+    &--left {
+        font-size: 3rem;
+    }
+
+    &--resume:hover .resume__icon {
+        color: $text-color;
+        transform: scale(1.2);
+    }
+
+    padding-bottom: 30px;
+}
+
 .hero {
     text-align: center;
 
@@ -197,14 +210,13 @@ h1 {
 
 .portfolio {
     color: $grey-color;
-
+    padding: 50px 0;
+    justify-content: center;
 }
 
 .example {
     width: 100%;
     height: 100%;
-
-    //background-color: $text-color;
     background-position: center;
     background-repeat: no-repeat;
     transition: all .5s;
@@ -280,7 +292,7 @@ h1 {
         position: absolute;
         top: 0;
         left: 0;
-        background-color: rgba(0, 208, 160, 0.5);
+        background-color: rgba(5, 150, 117, 0.5);
         z-index: -1;
     }
 
@@ -311,11 +323,18 @@ h1 {
 
 .resume {
     display: flex;
-
+    padding: 50px 0;
+    justify-content: center;
+    text-align: center;
 
     &__text {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         color: $grey-color;
+        padding-bottom: .5em;
+
+        &--bigger {
+            font-size: 1.5em;
+        }
     }
 
     &__left {
@@ -327,13 +346,20 @@ h1 {
         text-align: left;
         padding-left: 3rem;
     }
+
+    &__title {
+        padding-bottom: .5em;
+    }
+
+    &__icon {
+        transition: all .3s
+    }
 }
 
 
 
 .contact {
     background-image: url(../images/bg2.jpg);
-
     color: white;
     text-align: center;
     @extend %backgroundImg;
@@ -341,12 +367,12 @@ h1 {
     width: 100%;
 
     &:hover &__inner {
-        background-color: rgba(0, 208, 160, 0.7);
+        background-color: rgba(5, 150, 117, 0.7);
     }
 
     &__inner {
         background-color: transparent;
-        padding: 100px 0;
+        padding: 70px 0;
         transition: all .2s ease-out;
         height: 100%;
     }
@@ -360,13 +386,52 @@ h1 {
         font-size: 2rem;
         color: white;
         transition: all .3s;
+        padding: 1em;
 
-        &:hover {
+        &--hand {
             color: $text-color;
-            transform: scale(1.2);
+            padding-top: 0;
+
+            &:hover {
+                animation: wobble 1s 1;
+            }
         }
     }
 
+    &__link {
+        font-size: 1.2em;
+        color: white;
+        text-decoration: none;
+        transition: all .3s ease-in;
+
+        &:hover {
+            text-decoration: none;
+            color: $text-color;
+
+            .contact__icon {
+                color: $text-color;
+                transform: scale(1.2);
+            }
+        }
+
+
+
+        &--mail:hover .contact__icon--mail {
+            color: $text-color;
+            transform: rotate(360deg);
+            transform-origin: 150% 150%;
+        }
+
+        &--phone:hover .contact__icon--phone {
+            color: $text-color;
+            animation: shake 1s ease-in-out infinite forwards;
+            transform-origin: center;
+        }
+    }
+
+    &__title {
+        color: $text-color;
+    }
 }
 
 h5 {
@@ -377,6 +442,58 @@ footer {
     padding: 2rem;
     font-size: 1.5rem;
     color: $text-color;
+}
+
+
+@keyframes wobble {
+    from {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    15% {
+        -webkit-transform: translate3d(0, -25%, 0) rotate3d(0, 0, 1, -5deg);
+        transform: translate3d(0, -25%, 0) rotate3d(0, 0, 1, -5deg);
+    }
+
+    30% {
+        -webkit-transform: translate3d(0, 20%, 0) rotate3d(0, 0, 1, 3deg);
+        transform: translate3d(0, 20%, 0) rotate3d(0, 0, 1, 3deg);
+    }
+
+    45% {
+        -webkit-transform: translate3d(0, -15%, 0) rotate3d(0, 0, 1, -3deg);
+        transform: translate3d(0, -15%, 0) rotate3d(0, 0, 1, -3deg);
+    }
+
+    60% {
+        -webkit-transform: translate3d(0, 10%, 0) rotate3d(0, 0, 1, 2deg);
+        transform: translate3d(0, 10%, 0) rotate3d(0, 0, 1, 2deg);
+    }
+
+    75% {
+        -webkit-transform: translate3d(0, -5%, 0) rotate3d(0, 0, 1, -1deg);
+        transform: translate3d(0, -5%, 0) rotate3d(0, 0, 1, -1deg);
+    }
+
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+@keyframes shake {
+
+    0%,
+    100% {
+
+        transform: rotate(20deg);
+    }
+
+    50% {
+        transform: rotate(-20deg);
+    }
 }
 
 @keyframes fadeInUp {
