@@ -32,7 +32,6 @@ nav {
 
 h1 {
     font-size: 4rem;
-
     padding-top: 10%;
 }
 
@@ -558,4 +557,108 @@ footer {
 
 .fadeInLeft {
     animation: fadeInLeft 1.5s;
+}
+
+@media only screen and (max-width: 768px) {
+    .example {
+        transform: scale(1.1);
+        transform-origin: center;
+
+        &__wrapper {
+            border: 5px solid white;
+        }
+
+        &::before {
+            display: block;
+        }
+
+        &__title {
+            transform: translateY(0);
+        }
+
+        &__btn {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .contact {
+        &__inner {
+            background-color: rgba(5, 150, 117, 0.7);
+        }
+
+        &__title {
+            padding-top: 1em;
+        }
+
+        &__icon {
+            padding: 5px;
+            margin-left: -1em;
+        }
+
+        &__link {
+            padding: 1em;
+        }
+    }
+}
+
+@media only screen and (max-width: 576px) {
+
+    h1 {
+        font-size: 3em;
+        padding: 35% 0 0 0;
+        text-align: center;
+    }
+
+    .hero {
+        &__subtitle {
+            font-size: 2em;
+            padding: 1rem;
+        }
+
+        &__slide {
+            font-size: 3em;
+        }
+
+    }
+
+    .resume {
+        padding: 1em 0;
+
+        &__text {
+            font-size: 1em;
+            padding: 0;
+
+            &--bigger {
+                font-size: 1em;
+            }
+        }
+
+        &__title {
+            font-size: 1.3em;
+        }
+
+        &__right,
+        &__left {
+            padding: 1em;
+        }
+    }
+
+    .contact__inner {
+        padding: 30px 0;
+    }
+
+    .contact__text {
+        padding: 0;
+    }
+
+    .h2 {
+        padding-bottom: 1rem;
+    }
+
+    footer {
+        padding: .5em;
+        text-align: center;
+        font-size: 1em;
+    }
 }
