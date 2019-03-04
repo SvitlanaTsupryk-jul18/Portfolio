@@ -22,7 +22,7 @@
     ////smoothScroll
 
     function smoothScrollLinks() {
-        let nav = document.querySelector(".nav")
+        let nav = document.querySelector(".navbar-nav")
         nav.querySelectorAll('a[href^="#"]').forEach(link => {
             link.addEventListener('click', function (e) {
                 e.preventDefault();
