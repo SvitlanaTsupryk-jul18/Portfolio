@@ -585,9 +585,9 @@ footer {
     visibility: hidden;
 }
 
- @import "compass/css3";
+
 $colors: #2172b8
-          #20c997
+         #18a39b
          #82c545
          #f8b739
          #f06045
@@ -595,38 +595,42 @@ $colors: #2172b8
          #c12680
          #5d3191;
 
- $inner: 30px;
+$inner: 30px;
 $border: 6px;
 $spacing: 1px;
+
 div.spinner {
-  @include animation(rotate 10s infinite linear);
+  animation:rotate 10s infinite linear);
   position: relative;
   display: block;
-  margin: auto;
+   margin: auto;
+  
   $size: $inner + length($colors) * ($border + $spacing) * 2;
+  
   width: $size;
   height: $size;
 
-   i {
-    @include animation(
-      rotate 3s infinite cubic-bezier(.09, .6, .8, .03)
-    );
-    @include transform-origin(50%, 100%, 0);
+  i {
+    animation: rotate 3s infinite cubic-bezier(.09, .6, .8, .03);
+    transform-origin:50%, 100%, 0;
     position: absolute;
     display: inline-block;
     top: 50%;
     left: 50%;
     border: solid $border transparent;
     border-bottom: none;
-    @each $current in $colors {
+
+    
+    $current in $colors {
       $i: index($colors, $current);
+
       &:nth-child(#{$i}) {
         $size: $inner + $i * ($border + $spacing) * 2;
-        @include animation-timing-function(
-          cubic-bezier(.09, .3 * $i, .12 * $i, .03)  
-        );
 
-         width: $size;
+        animation-timing-function:
+          cubic-bezier(.09, .3 * $i, .12 * $i, .03);
+
+        width: $size;
         height: $size / 2;
         margin-top: -$size / 2;
         margin-left: -$size / 2;
@@ -638,9 +642,9 @@ div.spinner {
   }
 }
 
- @include keyframes(rotate) {
+@keyframes rotate {
   to {
-    @include rotateZ(360deg);
+  transform: rotateZ(360deg);
   }
 }
 
