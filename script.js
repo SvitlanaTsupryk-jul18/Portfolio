@@ -1,16 +1,16 @@
-(function (){
- 
+(function () {
+
     // invocation
- 
-    Preloader();
- smoothScrollLinks();
-     toTop();
+
+    preloader();
+    smoothScrollLinks();
+    toTop();
 
     // showTitle();
- 
- //////preloader
 
-    function Preloader() {
+    //////preloader
+
+    function preloader() {
         document.body.onload = function () {
             setTimeout(function () {
                 var preloader = document.querySelector(".preloader");
@@ -35,7 +35,7 @@
         });
     }
 
-   /// button to top
+    /// button to top
 
     function toTop() {
         var buttonTop = document.querySelector("#btn-up");
