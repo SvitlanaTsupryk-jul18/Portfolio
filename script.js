@@ -64,27 +64,24 @@
                 x: '-300%',
 
             }, delay = 1)
-
-            .from('#title', 2, {
-                y: '-300%',
-                ease: Bounce.easeOut
-            }, "-=2")
-            .from('.hero__subtitle', 2, {
-                y: '300%',
-
-            }, "-=1")
-            .from('.hero__toscroll', .5, {
-                border: "2px sold white",
-                opacity: 0
-            })
-            .from('.logo__h1', 1, {
-                y: '-100',
-                opacity: 0
-            }, "-=0.5")
             .staggerFrom(".nav-link", .5, {
                 y: '-50',
                 opacity: 0
             }, 0.1, "-=0.25")
+            .from('#title', 2, {
+                y: '-300%',
+                ease: Bounce.easeOut
+            })
+            .from('.hero__subtitle', .5, {
+                y: '100',
+                opacity: 0
+            }, "-=1")
+            .from('.hero__toscroll', 1, {
+                backgroundColor: "rgb(255, 255, 102)",
+
+                opacity: .8,
+                borderRadius: "5px"
+            }, "-=2")
 
     }
 })();
