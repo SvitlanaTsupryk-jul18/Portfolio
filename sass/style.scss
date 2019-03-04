@@ -564,13 +564,161 @@ footer {
 }
 
 
+
+@media only screen and (max-width: 768px) {
+    .example {
+        transform: scale(1.1);
+        transform-origin: center;
+
+        &__wrapper {
+            border: 5px solid white;
+        }
+
+        &::before {
+            display: block;
+        }
+
+        &__title {
+            transform: translateY(0);
+        }
+
+        &__btn {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .contact {
+        &__inner {
+            background-color: rgba(5, 150, 117, 0.7);
+        }
+
+        &__title {
+            padding-top: 1em;
+        }
+
+        &__icon {
+            padding: 5px;
+            margin-left: -1em;
+        }
+
+        &__link {
+            padding: 1em;
+        }
+    }
+}
+
+@media only screen and (max-width: 576px) {
+
+    h1 {
+        font-size: 3em;
+        padding: 35% 0 0 0;
+        text-align: center;
+    }
+
+    .hero {
+        &__subtitle {
+            font-size: 2em;
+            padding: 1rem;
+        }
+
+        &__slide {
+            font-size: 3em;
+        }
+
+    }
+
+    .resume {
+        padding: 1em 0;
+
+        &__text {
+            font-size: 1em;
+            padding: 0;
+
+            &--bigger {
+                font-size: 1em;
+            }
+        }
+
+        &__title {
+            font-size: 1.3em;
+        }
+
+        &__right,
+        &__left {
+            padding: 1em;
+        }
+    }
+
+    .contact__inner {
+        padding: 30px 0;
+    }
+
+    .contact__text {
+        padding: 0;
+    }
+
+    .h2 {
+        padding-bottom: 1rem;
+    }
+
+    footer {
+        padding: .5em;
+        text-align: center;
+        font-size: 1rem;
+    }
+}
+
+//styles of button to top
+
+#btn-up {
+    position: fixed;
+    right: 10%;
+    bottom: 10%;
+    display: block;
+    padding: 20px;
+    border-radius: 50%;
+    background-color: $grey-color;
+    z-index: 2;
+    cursor: pointer;
+    box-shadow: 0 0 0 $text-color;
+    color: $main-color;
+    font-weight: bold;
+    transition: .2s all ease-in;
+    opacity: 0;
+
+    &:hover {
+        animation: pulse 1.5s infinite;
+    }
+}
+
+.fa-angle-double-up {
+    font-size: 2em;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 102, 1);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 255, 102, 0.5);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 208, 160, 0.8);
+    }
+}
+
+///styles for preloader
+
 .preloader {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: 3;
+    z-index: 1111;
     background-color: white;
     text-align: center;
     color: $text-color;
@@ -715,130 +863,5 @@ div.spinner {
     to {
         transform: rotateZ(360deg);
 
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .example {
-        transform: scale(1.1);
-        transform-origin: center;
-
-        &__wrapper {
-            border: 5px solid white;
-        }
-
-        &::before {
-            display: block;
-        }
-
-        &__title {
-            transform: translateY(0);
-        }
-
-        &__btn {
-            transform: translateY(0);
-            opacity: 1;
-        }
-    }
-
-    .contact {
-        &__inner {
-            background-color: rgba(5, 150, 117, 0.7);
-        }
-
-        &__title {
-            padding-top: 1em;
-        }
-
-        &__icon {
-            padding: 5px;
-            margin-left: -1em;
-        }
-
-        &__link {
-            padding: 1em;
-        }
-    }
-}
-
-@media only screen and (max-width: 576px) {
-
-    h1 {
-        font-size: 3em;
-        padding: 35% 0 0 0;
-        text-align: center;
-    }
-
-    .hero {
-        &__subtitle {
-            font-size: 2em;
-            padding: 1rem;
-        }
-
-        &__slide {
-            font-size: 3em;
-        }
-
-    }
-
-    .resume {
-        padding: 1em 0;
-
-        &__text {
-            font-size: 1em;
-            padding: 0;
-
-            &--bigger {
-                font-size: 1em;
-            }
-        }
-
-        &__title {
-            font-size: 1.3em;
-        }
-
-        &__right,
-        &__left {
-            padding: 1em;
-        }
-    }
-
-    .contact__inner {
-        padding: 30px 0;
-    }
-
-    .contact__text {
-        padding: 0;
-    }
-
-    .h2 {
-        padding-bottom: 1rem;
-    }
-
-    footer {
-        padding: .5em;
-        text-align: center;
-        font-size: 1rem;
-    }
-}
-
-#btn-up {
-    position: fixed;
-    right: 10%;
-    bottom: 10%;
-    display: block;
-    padding: 20px;
-    border-radius: 50%;
-    background-color: $grey-color;
-    z-index: 2;
-    cursor: pointer;
-    box-shadow: 0 0 0 $main-color;
-    color: $main-color;
-    font-weight: bold;
-    transition: .2s all ease-in;
-    opacity: 0;
-
-    &:hover {
-        animation: pulse 1.5s infinite;
     }
 }
