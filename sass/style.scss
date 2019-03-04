@@ -865,3 +865,35 @@ div.spinner {
 
     }
 }
+
+
+//animaton on hover on titles
+
+.svg-wrapper {
+    position: relative;
+    margin: 0 auto;
+    width: 320px;
+}
+
+.shape {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+    fill: transparent;
+    stroke: $grey-color;
+    border-bottom: 5px solid white;
+    transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+}
+
+.text {
+    display: block;
+    top: -48px;
+    text-align: center;
+    position: relative;
+}
+
+.svg-wrapper:hover .shape {
+    stroke-width: 2px;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 760;
+}
