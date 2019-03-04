@@ -4,6 +4,8 @@
  
     Preloader();
  smoothScrollLinks();
+     toTop();
+
     // showTitle();
  
  //////preloader
@@ -33,6 +35,25 @@
         });
     }
 
+   /// button to top
+
+    function toTop() {
+        var buttonTop = document.querySelector("#btn-up");
+        window.onscroll = function () {
+            if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+                buttonTop.style.opacity = "1";
+            } else {
+                buttonTop.style.opacity = "0";
+            }
+        }
+
+        buttonTop.addEventListener("click", function (e) {
+            e.preventDefault();
+            document.querySelector(".hero").scrollIntoView({
+                behavior: 'smooth'
+            });
+        })
+    }
 
 
     //show text in example of portfolio
