@@ -563,6 +563,28 @@ footer {
 }
 
 
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 3;
+    background-color: $img-color;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    padding: 20%;
+    transition: 1s all;
+    opacity: 1;
+    visibility: visible;
+}
+
+.done {
+    opacity: 0;
+    visibility: hidden;
+}
+
  @import "compass/css3";
 $colors: #2172b8
           #20c997
