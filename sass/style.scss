@@ -374,6 +374,9 @@ h1 {
         padding: 70px 0;
         transition: all .2s ease-out;
         height: 100%;
+        &:hover .contact__inner--hand{
+                animation: wobble 1s 1;
+        }
     }
 
     &__text {
@@ -439,7 +442,7 @@ h5 {
 
 footer {
     padding: 2rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: $text-color;
 }
 
@@ -659,6 +662,6 @@ footer {
     footer {
         padding: .5em;
         text-align: center;
-        font-size: 1em;
+        font-size: 1rem;
     }
 }
