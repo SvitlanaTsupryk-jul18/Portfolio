@@ -751,3 +751,23 @@ div.spinner {
         font-size: 1rem;
     }
 }
+#btn-up {
+    position: fixed;
+    right: 10%;
+    bottom: 10%;
+    display: block;
+    padding: 20px;
+    border-radius: 50%;
+    background-color: $grey-color;
+    z-index: 2;
+    cursor: pointer;
+    box-shadow: 0 0 0 $main-color;
+    color:  $main-color;
+    font-weight: bold;
+    transition: .2s all ease-in;
+    opacity: 0;
+
+    &:hover {
+        animation: pulse 1.5s infinite;
+    }
+}
