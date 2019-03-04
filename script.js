@@ -41,7 +41,7 @@
         var buttonTop = document.querySelector("#btn-up");
         window.onscroll = function () {
             if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-                buttonTop.style.opacity = "1";
+                buttonTop.style.opacity = ".9";
             } else {
                 buttonTop.style.opacity = "0";
             }
