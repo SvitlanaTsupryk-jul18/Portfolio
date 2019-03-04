@@ -1,6 +1,24 @@
-(function () {
+(function () 
+ 
     // invocation
+ 
+    Preloader();
     // showTitle();
+ 
+ //////preloader
+
+    function Preloader() {
+        document.body.onload = function () {
+            setTimeout(function () {
+                var preloader = document.querySelector(".preloader");
+                if (!preloader.classList.contains('done')) {
+                    preloader.classList.add('done');
+                }
+            }, 1000)
+        }
+    };
+
+
 
     //show text in example of portfolio
     function showTitle() {
