@@ -348,7 +348,7 @@ h1 {
     &__icon {
         transition: all .3s
     }
-        &:hover .resume__icon {
+    &:hover .resume__icon {
         color: $text-color;
         transform: scale(1.2);
     }
@@ -365,17 +365,14 @@ h1 {
     background-attachment: fixed;
     width: 100%;
 
-    &:hover &__inner {
-        background-color: rgba(5, 150, 117, 0.7);
-    }
-
+   
     &__inner {
-        background-color: transparent;
+        background-color:  rgba(5, 150, 117, 0.5);
         padding: 70px 0;
         transition: all .2s ease-out;
         height: 100%;
 
-        &:hover .contact__inner--hand {
+        &:hover .contact__icon--hand {
             animation: wobble 1s 1;
         }
     }
@@ -890,7 +887,7 @@ div.spinner {
 
 .text {
     display: block;
-    top: -48px;
+    top: -53px;
     text-align: center;
     position: relative;
 }
