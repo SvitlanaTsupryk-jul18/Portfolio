@@ -40,11 +40,6 @@ h1 {
         font-size: 3rem;
     }
 
-    &--resume:hover .resume__icon {
-        color: $text-color;
-        transform: scale(1.2);
-    }
-
     padding-bottom: 30px;
 }
 
@@ -353,6 +348,11 @@ h1 {
     &__icon {
         transition: all .3s
     }
+        &:hover .resume__icon {
+        color: $text-color;
+        transform: scale(1.2);
+    }
+
 }
 
 
@@ -883,6 +883,9 @@ div.spinner {
     stroke: $grey-color;
     border-bottom: 5px solid white;
     transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+    &--white{
+        stroke: white;
+    }
 }
 
 .text {
