@@ -24,7 +24,7 @@
     ////smoothScroll
 
     function smoothScrollLinks() {
-        let nav = document.querySelector(".navbar-nav")
+        let nav = document.querySelector(".navbar-nav");
         nav.querySelectorAll('a[href^="#"]').forEach(link => {
             link.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -33,6 +33,13 @@
                 });
             });
         });
+        
+        let btnHero = document.querySelector(".hero__toscroll");
+        btnHero.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
     }
 
     /// button to top
@@ -61,14 +68,14 @@
 
         let tl = new TimelineMax();
         tl
-            .from(".navbar-brand", 2, {
+            .from(".navbar-brand", .5, {
                 x: '-300%',
 
-            }, delay = 1)
+            }, delay = .5)
             .staggerFrom(".nav-link", .5, {
                 y: '-50',
                 opacity: 0
-            }, 0.1, "-=0.25")
+            }, 0.1, "-=0.20")
             .from('#title', 2, {
                 y: '-300%',
                 ease: Bounce.easeOut
@@ -78,8 +85,7 @@
                 opacity: 0
             }, "-=1")
             .from('.hero__toscroll', 1, {
-                backgroundColor: "rgb(255, 255, 102)",
-
+                backgroundColor: "rgba(52, 58, 64)",
                 opacity: .8,
                 borderRadius: "5px"
             }, "-=2")
