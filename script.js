@@ -6,6 +6,7 @@
     smoothScrollLinks();
     toTop();
     showTitle();
+    AOS.init();
 
     //////preloader
 
