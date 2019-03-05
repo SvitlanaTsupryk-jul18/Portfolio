@@ -40,6 +40,7 @@
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
+            });
     }
 
     /// button to top
