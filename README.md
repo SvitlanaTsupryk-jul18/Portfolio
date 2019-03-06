@@ -1,1 +1,1 @@
-# [MY PORFOLIO](https://svitlanatsupryk-jul18.github.io/Portfolio/.)
+# [MY PORTFOLIO](https://svitlanatsupryk-jul18.github.io/Portfolio/.)
