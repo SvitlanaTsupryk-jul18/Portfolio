@@ -190,6 +190,7 @@ h1 {
     flex-wrap: wrap;
     font-size: 2em;
     text-align: center;
+    overflow:hidden;
 }
 
 .skills span {
@@ -351,8 +352,7 @@ h1 {
 
     &:hover .resume__icon {
         color: $text-color;
-        transform: scale(1.2);
-    }
+      }
 }
 
 
