@@ -665,6 +665,11 @@ footer {
 
     footer {
         padding: .5em;
+        text-align: center;
+    }
+
+    .image {
+        display: none !important;
     }
 }
 
@@ -672,7 +677,7 @@ footer {
 
 #btn-up {
     position: fixed;
-    right: 10%;
+    right: 7%;
     bottom: 10%;
     display: block;
     padding: 20px;
@@ -915,7 +920,7 @@ div.spinner {
     display: block;
     width: 90vw;
     height: 100px;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .image * {
